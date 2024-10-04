@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
-import * as CryptoJS from 'crypto-js'; // Importamos CryptoJS para el cifrado y hash
+// import * as CryptoJS from 'crypto-js'; // Importamos CryptoJS para el cifrado y hash
+
+
 import { FormsModule } from '@angular/forms'; // Importamos FormsModule
 import { CommonModule } from '@angular/common'; // Importamos CommonModule
 import { SidebarModule } from 'primeng/sidebar';
 import { DialogModule } from 'primeng/dialog';
 import { InputNumberModule } from 'primeng/inputnumber';
+
+
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
