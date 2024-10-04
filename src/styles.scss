@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+// @import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient( to right, #ffeefeb2 0%, #fffee068 60%, #ffffffa4 100%);
+
+  height: 100vh;
+}

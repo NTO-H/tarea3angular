@@ -1,0 +1,315 @@
+* {
+  //   margin: 0;
+  //   padding: 0;
+  //   box-sizing: border-box;
+  //   font-weight: bold;
+  //   color: rgb(62, 76, 109);
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  margin-bottom: 50px;
+}
+
+header,
+footer {
+  z-index: 100; /* Asegura que esté por debajo del modal */
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2); /* Transparencia */
+  position: fixed;
+  left: 0;
+}
+
+header {
+  top: 0;
+  backdrop-filter: blur(10px); /* Efecto blur */
+
+  background: linear-gradient(
+    to right,
+    #ffeefeb2 0%,
+    #fffee068 60%,
+    #ffffffa4 100%
+  );
+
+  height: 50px;
+}
+
+footer {
+  bottom: 0;
+}
+.github-link {
+  font-family: "Font Awesome 5 Free"; /* Necesario si decides usar la fuente */
+  text-decoration: none; /* Sin subrayado */
+  color: #333; /* Color del texto */
+  font-weight: 900; /* Ajusta el grosor si es necesario */
+}
+
+.github-link:hover {
+  color: #000; /* Color al pasar el cursor */
+}
+
+ul {
+  list-style: none; /* Sin viñetas */
+  padding: 0; /* Sin padding */
+  margin: 0; /* Sin margin */
+}
+.centered-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 130vh;
+  // main{
+  // margin-top:-50px;
+
+  // }
+  padding: 20px;
+  margin: 0;
+  // filter: blur(10px); /* Aplicar el filtro blur al fondo */
+  background: linear-gradient(90deg, #ebfffc 0%, #e9d6fe 60%, #ffeedd 100%);
+  animation: animationName 45s ease infinite;
+}
+
+@keyframes animationName {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.main-container {
+  margin-top: -150px;
+  //  margin-bottom:500px;
+  margin-bottom: 50px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  // height: 500vh;
+  padding: 20px;
+  // margin-bottom: 30px;
+  gap: 20px;
+}
+.flotar-imagen {
+  max-width: 50%;
+  height: auto;
+  animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.titulo-seguridad {
+  color: rgb(40, 170, 142);
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+.container {
+  // backdrop-filter: blur(1px);
+  background: #f6eee524;
+  // background: radial-gradient(circle at center, #ffe3fe 0%, #e0ffed 60%, #ffffff 100%);
+  position: relative;
+  width: 350px;
+  height: 250px;
+
+  display: flex;
+  // backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  // background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px); /* Efecto blur */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05); /* Efecto hover */
+}
+
+.container h1 {
+  color: rgb(40, 170, 142);
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    height: 150px;
+  }
+
+  .container h1 {
+    font-size: 18px;
+  }
+}
+.hero {
+  // text-align: center;
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  // border: dashed;
+  height: 50%;
+  // margin-top: 30%;
+  align-items: center;
+  width: 70%;
+  text-align: center;
+  .text {
+    text-align: center;
+    margin-left: auto;
+    // height: 1px;
+    align-items: center;
+    // border: dashed;
+  }
+  h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+  }
+}
+
+.vista {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 80%;
+}
+// hjfdhfhfhhfhfhhfhfhhfhfhhfhfhffhh
+form {
+  height: 70%;              /* Altura del formulario */
+  width: 50%;               /* Ancho del formulario */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;    /* Los elementos se apilan en una columna */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    to right,
+    #ffeefeb2 0%,
+    #fffee068 60%,
+    #ffffffa4 100%
+  );
+
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;             /* Espaciado entre el input y otros elementos */
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #4da6ff;      /* Azul claro */
+  box-shadow: 0 0 5px rgba(77, 166, 255, 0.5); /* Sombra ligera */
+  outline: none;
+}
+
+button {
+  background-color: #4da6ff;  /* Azul celeste */
+  color: white;
+  padding: 10px 15px;
+  margin: 5px 0;              /* Espaciado */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #3b8bdb;  /* Azul más oscuro al hacer hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(77, 166, 255, 0.5);
+}
+
+span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+/* Personaliza el botón de decremento */
+.custom-decrement-button {
+  background-color: white !important; /* Fondo blanco */
+  border: 1px solid #ccc; /* Borde gris claro */
+  
+  .pi-minus {
+    color: black !important; /* Icono negro */
+  }
+}
+
+/* Personaliza el botón de incremento */
+.custom-increment-button {
+  background-color: white !important; /* Fondo blanco */
+  border: 1px solid #ccc; /* Borde gris claro */
+  
+  .pi-plus {
+    color: black !important; /* Icono negro */
+  }
+}
+
+/* También puedes personalizar el input para mantener consistencia */
+.p-inputnumber {
+  .p-inputtext {
+    border: 1px solid #ccc !important; /* Borde gris claro */
+    background-color: white !important; /* Fondo blanco */
+    color: black !important; /* Texto negro */
+  }
+}

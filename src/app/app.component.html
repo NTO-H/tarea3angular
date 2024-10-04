@@ -1,0 +1,301 @@
+<header class="transparent-header">
+  <ul>
+    <li>
+      <a
+        href="https://github.com/NTO-H/tarea3angular.git"
+        target="_blank"
+        class="github-link"
+      >
+        github-link<i class="fa-brands fa-github"></i
+        ><!-- Ícono de GitHub -->
+      </a>
+    </li>
+  </ul>
+</header>
+
+<main class="centered-main">
+  <div class="vista" *ngIf="visible">
+    <button (click)="resetDialogs()" class="btn-ir">Cerrar</button>
+    <!-- Formulario para cifrar -->
+    <!-- InputNumber para definir el desplazamiento del Cifrado César -->
+    <div>
+      <label for="inputDesplazamiento">Desplazamiento:</label>
+      <p-inputNumber
+        [(ngModel)]="desplazamiento"
+        [showButtons]="true"
+        buttonLayout="horizontal"
+        inputId="horizontal"
+        spinnerMode="horizontal"
+        [step]="1"
+        [min]="1"
+        [max]="25"
+        decrementButtonClass="custom-decrement-button"
+        incrementButtonClass="custom-increment-button"
+        incrementButtonIcon="pi pi-plus"
+        decrementButtonIcon="pi pi-minus"
+        name="desplazamiento"
+      >
+      </p-inputNumber>
+    </div>
+    <!-- Formulario para cifrar -->
+    <form id="formCifrar" (ngSubmit)="cifrarTexto()">
+      <label for="inputCifrar">Texto a cifrar:</label>
+      <input
+        type="text"
+        id="inputCifrar"
+        placeholder="Ingresa texto"
+        [(ngModel)]="textoCifrar"
+        name="textoCifrar"
+        required
+      />
+      <button type="submit">Cifrar</button>
+      <span id="resultadoCifrado">Resultado: {{ resultadoCifrado }}</span>
+    </form>
+
+    <!-- Formulario para descifrar -->
+    <form id="formDescifrar" (ngSubmit)="descifrarTexto()">
+      <label for="inputDescifrar">Texto a descifrar:</label>
+      <input
+        type="text"
+        id="inputDescifrar"
+        placeholder="Ingresa texto cifrado"
+        [(ngModel)]="textoDescifrar"
+        name="textoDescifrar"
+        required
+      />
+      <button type="submit">Descifrar</button>
+      <span id="resultadoDescifrado">Resultado: {{ resultadoDescifrado }}</span>
+    </form>
+  </div>
+
+  <div class="vista" *ngIf="visible2">
+    <button (click)="resetDialogs()" class="btn-ir">Cerrar</button>
+    <form id="formCifrar" (ngSubmit)="cifrarTextoEscitala()">
+      <label for="inputCifrar">Texto a cifrar:</label>
+      <input
+        type="text"
+        id="inputCifrar"
+        placeholder="Ingresa texto"
+        [(ngModel)]="textoCifrar"
+        name="textoCifrar"
+        required
+      />
+      <label for="inputLongitud">Longitud del bastón:</label>
+      <input
+        type="number"
+        id="inputLongitud"
+        placeholder="Ingresa longitud"
+        [(ngModel)]="longitudBaston"
+        name="longitudBaston"
+        required
+      />
+      <button type="submit">Cifrar</button>
+      <span id="resultadoCifrado">Resultado: {{ resultadoCifrado }}</span>
+    </form>
+
+    <!-- Formulario para descifrar -->
+    <form id="formDescifrar" (ngSubmit)="descifrarTextoEscitala()">
+      <label for="inputDescifrar">Texto a descifrar:</label>
+      <input
+        type="text"
+        id="inputDescifrar"
+        placeholder="Ingresa texto cifrado"
+        [(ngModel)]="textoDescifrar"
+        name="textoDescifrar"
+        required
+      />
+      <button type="submit">Descifrar</button>
+      <span id="resultadoDescifrado">Resultado: {{ resultadoDescifrado }}</span>
+    </form>
+  </div>
+  <div class="vista" *ngIf="visible3">
+    <button (click)="resetDialogs()" class="btn-ir">Cerrar</button>
+    <form id="formCifrar">
+      <label for="inputCifrar">Texto a cifrar:</label>
+      <input
+        type="text"
+        id="inputCifrar"
+        placeholder="Ingresa texto"
+        required
+      />
+      <button type="submit">Cifrar</button>
+      <span id="resultadoCifrado">Resultado: </span>
+    </form>
+
+    <!-- Formulario para descifrar -->
+    <form id="formDescifrar">
+      <label for="inputDescifrar">Texto a descifrar:</label>
+      <input
+        type="text"
+        id="inputDescifrar"
+        placeholder="Ingresa texto cifrado"
+        required
+      />
+      <button type="submit">Descifrar</button>
+      <span id="resultadoDescifrado">Resultado: </span>
+    </form>
+  </div>
+
+  <div class="vista" *ngIf="visible4">
+    <button (click)="resetDialogs()" class="btn-ir">Cerrar</button>
+    <form id="formCifrar">
+      <label for="inputCifrar">Texto a cifrar:</label>
+      <input
+        type="text"
+        id="inputCifrar"
+        placeholder="Ingresa texto"
+        required
+      />
+      <button type="submit">Cifrar</button>
+      <span id="resultadoCifrado">Resultado: </span>
+    </form>
+
+    <!-- Formulario para descifrar -->
+    <form id="formDescifrar">
+      <label for="inputDescifrar">Texto a descifrar:</label>
+      <input
+        type="text"
+        id="inputDescifrar"
+        placeholder="Ingresa texto cifrado"
+        required
+      />
+      <button type="submit">Descifrar</button>
+      <span id="resultadoDescifrado">Resultado: </span>
+    </form>
+  </div>
+  <div class="vista" *ngIf="visible5">
+    <button (click)="resetDialogs()" class="btn-ir">Cerrar</button>
+    <form id="formCifrar">
+      <label for="inputCifrar">Texto a cifrar:</label>
+      <input
+        type="text"
+        id="inputCifrar"
+        placeholder="Ingresa texto"
+        required
+      />
+      <button type="submit">Cifrar</button>
+      <span id="resultadoCifrado">Resultado: </span>
+    </form>
+
+    <!-- Formulario para descifrar -->
+    <form id="formDescifrar">
+      <label for="inputDescifrar">Texto a descifrar:</label>
+      <input
+        type="text"
+        id="inputDescifrar"
+        placeholder="Ingresa texto cifrado"
+        required
+      />
+      <button type="submit">Descifrar</button>
+      <span id="resultadoDescifrado">Resultado: </span>
+    </form>
+  </div>
+
+  <section
+    *ngIf="!visible && !visible2 && !visible3 && !visible4 && !visible5"
+    class="hero"
+  >
+    <div class="text">
+      <p class="titulo-seguridad">Seguridad Informática</p>
+      <p>
+        El cifrado es esencial en la seguridad informática, ya que protege los
+        datos sensibles de accesos no autorizados. Garantiza la confidencialidad
+        y privacidad de la información.
+      </p>
+    </div>
+    <img
+      class="flotar-imagen"
+      src="https://res.cloudinary.com/dvvhnrvav/image/upload/v1727977114/rlkcf64xg07nziumwsfs.png"
+      alt="Hero Image"
+    />
+  </section>
+
+  <div
+    *ngIf="!visible && !visible2 && !visible3 && !visible4 && !visible5"
+    class="main-container"
+  >
+    <div class="container">
+      <h3>Option 1: Cifrado César</h3>
+      <p>
+        El cifrado César es una técnica antigua que desplaza las letras del
+        alfabeto un número fijo de posiciones. Fue utilizado por Julio César
+        para proteger mensajes militares.
+      </p>
+      <button (click)="showDialog(1)" class="btn-ir">Ir</button>
+    </div>
+
+    <div class="container">
+      <h3>Option 2: Cifrado Enigma</h3>
+      <p>
+        La máquina Enigma fue utilizada por los nazis en la Segunda Guerra
+        Mundial para codificar mensajes. Su complejidad dificultaba su
+        descifrado hasta que los aliados lograron romperlo.
+      </p>
+      <button (click)="showDialog(2)" class="btn-ir">Ir</button>
+    </div>
+
+    <div class="container">
+      <h3>Option 6: TEA (Tiny Encryption Algorithm)</h3>
+      <p>
+        TEA es un algoritmo de cifrado de bloques sencillo y eficiente, pero que
+        tiene algunas vulnerabilidades conocidas. A menudo se utiliza como base
+        para su versión extendida, XTEA.
+      </p>
+      <button (click)="showDialog(3)" class="btn-ir">Ir</button>
+    </div>
+
+    <div class="container">
+      <h3>Option 7: RSA (Rivest-Shamir-Adleman)</h3>
+      <p>
+        RSA es uno de los algoritmos más conocidos y utilizados para el cifrado
+        y la firma digital. Su seguridad se basa en la dificultad de factorizar
+        grandes números primos.
+      </p>
+      <button (click)="showDialog(4)" class="btn-ir">Ir</button>
+    </div>
+
+    <div class="container">
+      <h3>Option 8: Whirlpool</h3>
+      <p>
+        Whirlpool es una función hash criptográfica diseñada para crear un
+        resumen de un mensaje. Es conocido por su alta seguridad y se utiliza en
+        aplicaciones que requieren integridad de datos.
+      </p>
+      <button (click)="showDialog(5)" class="btn-ir">Ir</button>
+    </div>
+  </div>
+
+  <style>
+    .container {
+      display: flex;
+      border: 1px solid #ddd;
+      flex-direction: column;
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 15px;
+      width: 20%;
+      text-align: center;
+    }
+
+    .btn-ir {
+      background-color: #00bfff; /* azul celeste */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn-ir:hover {
+      background-color: #009acd;
+    }
+  </style>
+</main>
+
+<footer class="transparent-footer">
+  <p>
+    Implementación de los métodos simetricos, asimetricos y hash a través de
+    métodos, funciones de los frameworks seleccionados.
+  </p>
+</footer>
