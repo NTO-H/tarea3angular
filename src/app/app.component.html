@@ -18,8 +18,8 @@
     <button (click)="resetDialogs()" class="btn-ir">Cerrar</button>
     <!-- Formulario para cifrar -->
     <!-- InputNumber para definir el desplazamiento del Cifrado César -->
+    <label for="inputDesplazamiento">Desplazamiento:</label>
     <div>
-      <label for="inputDesplazamiento">Desplazamiento:</label>
       <p-inputNumber
         [(ngModel)]="desplazamiento"
         [showButtons]="true"
@@ -68,25 +68,50 @@
     </form>
   </div>
 
+  <div class="vista" *ngIf="visible3">
+    <button (click)="resetDialogs()" class="btn-ir">Cerrar</button>
+
+    <div class="cnt-frm">
+      <form id="formCifrar" (ngSubmit)="cifrarTexto()">
+        <label for="inputCifrar">Texto a cifrar:</label>
+        <input
+          type="text"
+          id="inputCifrar"
+          placeholder="Ingresa texto"
+          [(ngModel)]="textoCifrar"
+          name="textoCifrar"
+          required
+        />
+        <button type="submit">Cifrar</button>
+        <span id="resultadoCifrado">Resultado: {{ resultadoCifrado }}</span>
+      </form>
+
+      <form id="formDescifrar" (ngSubmit)="descifrarTexto()">
+        <label for="inputDescifrar">Texto a descifrar:</label>
+        <input
+          type="text"
+          id="inputDescifrar"
+          placeholder="Ingresa texto cifrado"
+          [(ngModel)]="textoDescifrar"
+          name="textoDescifrar"
+          required
+        />
+        <button type="submit">Descifrar</button>
+        <span id="resultadoDescifrado"
+          >Resultado: {{ resultadoDescifrado }}</span
+        >
+      </form>
+    </div>
+  </div>
   <div class="vista" *ngIf="visible2">
     <button (click)="resetDialogs()" class="btn-ir">Cerrar</button>
-    <form id="formCifrar" (ngSubmit)="cifrarTextoEscitala()">
+    <form id="formCifrar" (ngSubmit)="onCifrar()">
       <label for="inputCifrar">Texto a cifrar:</label>
       <input
         type="text"
         id="inputCifrar"
-        placeholder="Ingresa texto"
         [(ngModel)]="textoCifrar"
-        name="textoCifrar"
-        required
-      />
-      <label for="inputLongitud">Longitud del bastón:</label>
-      <input
-        type="number"
-        id="inputLongitud"
-        placeholder="Ingresa longitud"
-        [(ngModel)]="longitudBaston"
-        name="longitudBaston"
+        placeholder="Ingresa texto"
         required
       />
       <button type="submit">Cifrar</button>
@@ -94,47 +119,24 @@
     </form>
 
     <!-- Formulario para descifrar -->
-    <form id="formDescifrar" (ngSubmit)="descifrarTextoEscitala()">
+    <form id="formDescifrar" (ngSubmit)="onDescifrar()">
       <label for="inputDescifrar">Texto a descifrar:</label>
       <input
         type="text"
         id="inputDescifrar"
-        placeholder="Ingresa texto cifrado"
         [(ngModel)]="textoDescifrar"
-        name="textoDescifrar"
+        placeholder="Ingresa texto cifrado"
         required
       />
       <button type="submit">Descifrar</button>
       <span id="resultadoDescifrado">Resultado: {{ resultadoDescifrado }}</span>
     </form>
   </div>
-  <div class="vista" *ngIf="visible3">
-    <button (click)="resetDialogs()" class="btn-ir">Cerrar</button>
-    <form id="formCifrar">
-      <label for="inputCifrar">Texto a cifrar:</label>
-      <input
-        type="text"
-        id="inputCifrar"
-        placeholder="Ingresa texto"
-        required
-      />
-      <button type="submit">Cifrar</button>
-      <span id="resultadoCifrado">Resultado: </span>
-    </form>
 
-    <!-- Formulario para descifrar -->
-    <form id="formDescifrar">
-      <label for="inputDescifrar">Texto a descifrar:</label>
-      <input
-        type="text"
-        id="inputDescifrar"
-        placeholder="Ingresa texto cifrado"
-        required
-      />
-      <button type="submit">Descifrar</button>
-      <span id="resultadoDescifrado">Resultado: </span>
-    </form>
-  </div>
+
+
+
+
 
   <div class="vista" *ngIf="visible4">
     <button (click)="resetDialogs()" class="btn-ir">Cerrar</button>
@@ -163,31 +165,31 @@
       <span id="resultadoDescifrado">Resultado: </span>
     </form>
   </div>
+
+
+
+
+  
   <div class="vista" *ngIf="visible5">
     <button (click)="resetDialogs()" class="btn-ir">Cerrar</button>
-    <form id="formCifrar">
-      <label for="inputCifrar">Texto a cifrar:</label>
-      <input
-        type="text"
-        id="inputCifrar"
-        placeholder="Ingresa texto"
-        required
-      />
-      <button type="submit">Cifrar</button>
-      <span id="resultadoCifrado">Resultado: </span>
-    </form>
 
-    <!-- Formulario para descifrar -->
-    <form id="formDescifrar">
-      <label for="inputDescifrar">Texto a descifrar:</label>
+    <!-- Formulario para calcular el Hash -->
+    <form id="formHash" (ngSubmit)="hashText()">
+      <label for="inputTexto">Texto a hashear:</label>
       <input
         type="text"
-        id="inputDescifrar"
-        placeholder="Ingresa texto cifrado"
+        n
+        id="inputTexto"
+        [(ngModel)]="texto"
+        name="inputTexto"
+        placeholder="Ingresa texto plano"
         required
       />
-      <button type="submit">Descifrar</button>
-      <span id="resultadoDescifrado">Resultado: </span>
+      <button type="submit">Calcular Hash</button>
+      <span id="resultadoHash">Resultado: {{ resultado }}</span>
+      <!-- Solo el botón para descifrar -->
+      <!-- <button type="button" (click)="descifrarTexto()">Descifrar</button> -->
+      <!-- <span id="resultadoHash">Resultado: {{ resultadoDescifrado }}</span> -->
     </form>
   </div>
 

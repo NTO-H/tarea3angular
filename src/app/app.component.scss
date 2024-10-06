@@ -61,10 +61,7 @@ ul {
   justify-content: center;
   align-items: center;
   height: 130vh;
-  // main{
-  // margin-top:-50px;
-
-  // }
+ 
   padding: 20px;
   margin: 0;
   // filter: blur(10px); /* Aplicar el filtro blur al fondo */
@@ -210,11 +207,18 @@ ul {
 .vista {
   display: flex;
   gap: 20px;
-  flex-direction: row;
+  flex-direction: column;
+  
   justify-content: center;
   align-items: center;
   height: 70%;
   width: 80%;
+}
+.cnt-frm{
+
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
 }
 // hjfdhfhfhhfhfhhfhfhhfhfhhfhfhffhh
 form {
